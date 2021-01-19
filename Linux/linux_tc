@@ -1,0 +1,18 @@
+# linux流控设置
+
+## ts qdisc
+- 查询
+ts qdisc list
+ts qdisc show
+
+- 增加
+ts qdisc add dev em1 root netem loss 50% delay 1000ms 100ms
+
+- 删除
+ts qdisc del dev em1 root
+
+- 修改
+ts qdisc change dev em1 root ...
+
+
+[man_tc](https://man7.org/linux/man-pages/man8/tc.8.html)  
